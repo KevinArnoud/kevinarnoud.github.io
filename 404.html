@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>404 — Kevin Arnoud</title>
+  <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Inter:wght@400;500&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+  <!-- Chemins ABSOLUS : cette page est servie par GitHub Pages depuis
+       n'importe quelle URL cassée, les chemins relatifs y échoueraient. -->
+  <link rel="stylesheet" href="/assets/css/style.css">
+</head>
+<body>
+
+  <canvas id="bg-net" aria-hidden="true"></canvas>
+
+  <nav class="topbar">
+    <a class="brand" href="/"><span class="prompt-sign">&gt;</span> kevin.arnoud<span class="prompt-sign">_</span></a>
+  </nav>
+
+  <main class="wrap">
+    <div class="fiche-erreur" style="margin-top: 90px;">
+      <h1>&gt; erreur 404 : cette page n'existe pas</h1>
+      <p>Le lien que vous avez suivi est cassé ou obsolète. Tout le portfolio reste à un clic :</p>
+      <ul id="liste-404">
+        <li><a href="/">← Accueil du portfolio</a></li>
+      </ul>
+    </div>
+  </main>
+
+  <footer>
+    <span>© 2026 Kevin Arnoud — construit à la main, hébergé sur GitHub Pages</span>
+    <span>&gt; même perdue, une page reste pilotée</span>
+  </footer>
+
+  <script src="/data/projects.js"></script>
+  <script>
+    /* Liste des projets générée depuis la source de vérité — la 404
+       reste à jour sans maintenance quand la liste évolue. */
+    (function () {
+      "use strict";
+      if (typeof PROJECTS === "undefined") return;
+      var ul = document.getElementById("liste-404");
+      PROJECTS.forEach(function (p) {
+        var li = document.createElement("li");
+        var a = document.createElement("a");
+        a.href = "/projet.html?id=" + p.id;
+        a.textContent = p.numero + " · " + p.titre;
+        li.appendChild(a);
+        ul.appendChild(li);
+      });
+    })();
+  </script>
+  <script src="/assets/js/main.js"></script>
+</body>
+</html>

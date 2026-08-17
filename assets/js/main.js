@@ -19,7 +19,7 @@ const reduitMotion = window.matchMedia("(prefers-reduced-motion: reduce)").match
 /* ============================================================
    1. BOOT SEQUENCE
    ------------------------------------------------------------
-   ~1,5 s au total. Poka-Yoke :
+   ~2,5 s au total. Poka-Yoke :
    - clic / touche = skip immédiat
    - déjà vue dans la session = pas rejouée (sessionStorage)
    - reduced-motion = pas jouée du tout
@@ -37,9 +37,9 @@ const reduitMotion = window.matchMedia("(prefers-reduced-motion: reduce)").match
 
   const lignes = [
     { txt: "> init kevin-arnoud.sh", delai: 0 },
-    { txt: "> profil ........ ingénierie système · IT ", ok: "OK", delai: 380 },
-    { txt: "> modules ....... PowerShell · Power Platform · IA ", ok: "OK", delai: 760 },
-    { txt: "> ouvrir portfolio kevin.arnoud", delai: 1100, tape: true }
+    { txt: "> profil ........ ingénierie système · IT ", ok: "OK", delai: 620 },
+    { txt: "> modules ....... PowerShell · Power Platform · IA ", ok: "OK", delai: 1240 },
+    { txt: "> ouvrir portfolio kevin.arnoud", delai: 1850, tape: true }
   ];
 
   const inner = $("#boot-inner");
@@ -51,7 +51,7 @@ const reduitMotion = window.matchMedia("(prefers-reduced-motion: reduce)").match
       const div = document.createElement("div");
       div.className = "line";
       if (l.tape) {
-        /* dernière ligne : effet de frappe rapide (~350 ms) */
+        /* dernière ligne : effet de frappe (~550 ms) */
         div.classList.add("cursor");
         inner.appendChild(div);
         let i = 0;
@@ -59,7 +59,7 @@ const reduitMotion = window.matchMedia("(prefers-reduced-motion: reduce)").match
           if (termine) { clearInterval(t); return; }
           div.textContent = l.txt.slice(0, ++i);
           if (i >= l.txt.length) clearInterval(t);
-        }, 350 / l.txt.length);
+        }, 550 / l.txt.length);
       } else {
         div.innerHTML = l.txt + (l.ok ? '<span class="ok">' + l.ok + "</span>" : "");
         inner.appendChild(div);
@@ -76,8 +76,8 @@ const reduitMotion = window.matchMedia("(prefers-reduced-motion: reduce)").match
     revelerHero(false);
   }
 
-  /* Fin nominale à 1,55 s — skip possible avant */
-  setTimeout(finirBoot, 1550);
+  /* Fin nominale à 2,55 s — skip possible avant */
+  setTimeout(finirBoot, 2550);
   boot.addEventListener("click", finirBoot);
   window.addEventListener("keydown", finirBoot, { once: true });
 })();
