@@ -1,0 +1,27 @@
+# ============================================================
+# NORMALISATION DES FINS DE LIGNE
+# ------------------------------------------------------------
+# Le dépôt stocke en LF, et checkout en LF sur toutes les
+# plateformes — y compris Windows. Cela neutralise le
+# core.autocrlf=true local, qui marquait les fichiers comme
+# modifiés sans aucun changement de contenu.
+# ============================================================
+
+* text=auto eol=lf
+
+# -- Sources web : LF explicite --
+*.html  text eol=lf
+*.css   text eol=lf
+*.js    text eol=lf
+*.json  text eol=lf
+*.svg   text eol=lf
+*.md    text eol=lf
+
+# -- Binaires : jamais de normalisation ni de diff textuel --
+*.png   binary
+*.jpg   binary
+*.ico   binary
+*.mp4   binary
+*.webm  binary
+*.woff  binary
+*.woff2 binary
