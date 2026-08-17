@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projet — Kevin Arnoud</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Inter:wght@400;500&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+  <canvas id="bg-net" aria-hidden="true"></canvas>
+
+  <nav class="topbar">
+    <a class="brand" href="index.html"><span class="prompt-sign">&gt;</span> kevin.arnoud<span class="prompt-sign">_</span></a>
+    <button class="kbd-hint" type="button" aria-label="Ouvrir la navigation (Ctrl+K)">
+      <span class="kbd-label">naviguer</span> <kbd>Ctrl</kbd><kbd>K</kbd>
+    </button>
+  </nav>
+
+  <main class="wrap" id="fiche">
+    <!-- Contenu injecté par assets/js/projet.js depuis data/projects.js
+         selon le paramètre ?id=… — état d'erreur géré si id inconnu. -->
+  </main>
+
+  <div id="palette-overlay" role="dialog" aria-modal="true" aria-label="Navigation rapide">
+    <div id="palette">
+      <div id="palette-input-row">
+        <span class="prompt-sign">&gt;</span>
+        <input id="palette-input" type="text" placeholder="chercher un projet, une page…" autocomplete="off" spellcheck="false">
+      </div>
+      <div id="palette-list" role="listbox"></div>
+      <div id="palette-foot">
+        <span><kbd>↑</kbd><kbd>↓</kbd> naviguer</span>
+        <span><kbd>Entrée</kbd> ouvrir</span>
+        <span><kbd>Échap</kbd> fermer</span>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <span>© 2026 Kevin Arnoud — construit à la main, hébergé sur GitHub Pages</span>
+    <span>&gt; propulsé par une source de vérité unique : projects.js</span>
+  </footer>
+
+  <script src="data/projects.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/projet.js"></script>
+</body>
+</html>

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kevin Arnoud — Portfolio · Ingénierie système · Power Platform · IA</title>
+  <meta name="description" content="Portfolio de Kevin Arnoud : automatisation, Power Platform, PowerShell et projets IA. Pilotage par la donnée, zéro tâche manuelle.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Inter:wght@400;500&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+  <!-- ===== 1. Pré-roll boot (1,5 s, cliquer pour passer) ===== -->
+  <div id="boot" role="presentation" aria-hidden="true">
+    <div id="boot-inner"></div>
+    <button id="boot-skip" type="button">cliquer pour passer</button>
+  </div>
+
+  <!-- ===== 2. Fond constellation ===== -->
+  <canvas id="bg-net" aria-hidden="true"></canvas>
+
+  <!-- ===== 3. Barre supérieure ===== -->
+  <nav class="topbar">
+    <a class="brand" href="index.html"><span class="prompt-sign">&gt;</span> kevin.arnoud<span class="prompt-sign">_</span></a>
+    <button class="kbd-hint" type="button" aria-label="Ouvrir la navigation (Ctrl+K)">
+      <span class="kbd-label">naviguer</span> <kbd>Ctrl</kbd><kbd>K</kbd>
+    </button>
+  </nav>
+
+  <!-- ===== 4. Hero ===== -->
+  <header class="hero wrap">
+    <p class="hero-eyebrow mono">$ status : <span class="ok">disponible pour transformer vos process</span></p>
+    <h1>Ingénierie système,<br>automatisation &amp; <span class="grad">IA appliquée</span>.</h1>
+    <p class="hero-sub">
+      Je conçois des outils qui suppriment les tâches manuelles et rendent le pilotage
+      visible : Power Platform, PowerShell, données et IA — du besoin terrain à la mise en production.
+    </p>
+    <div class="hero-ctas">
+      <a class="btn btn-primary" href="#projets">voir les projets ↓</a>
+      <button class="btn btn-ghost kbd-hint-alt kbd-hint" type="button">ou tapez Ctrl+K</button>
+    </div>
+  </header>
+
+  <!-- ===== 5. Projets ===== -->
+  <main class="wrap">
+    <section id="projets" class="section">
+      <div class="section-head reveal">
+        <h2>Projets</h2>
+        <span class="path mono">~/portfolio/projets — 5 éléments</span>
+      </div>
+      <div id="grid-projets" class="grid-projets"><!-- généré depuis data/projects.js --></div>
+    </section>
+
+    <section id="dc" class="section">
+      <div class="section-head reveal">
+        <h2>Dossier de compétences</h2>
+        <span class="path mono">~/portfolio/dc — liaison en Phase 3</span>
+      </div>
+      <p class="reveal" style="color: var(--muted); max-width: 640px;">
+        Le CV interactif complet (parcours, stack, expériences) sera lié ici lors de la refonte v2.
+      </p>
+    </section>
+  </main>
+
+  <!-- ===== 6. Command palette ===== -->
+  <div id="palette-overlay" role="dialog" aria-modal="true" aria-label="Navigation rapide">
+    <div id="palette">
+      <div id="palette-input-row">
+        <span class="prompt-sign">&gt;</span>
+        <input id="palette-input" type="text" placeholder="chercher un projet, une page…" autocomplete="off" spellcheck="false">
+      </div>
+      <div id="palette-list" role="listbox"></div>
+      <div id="palette-foot">
+        <span><kbd>↑</kbd><kbd>↓</kbd> naviguer</span>
+        <span><kbd>Entrée</kbd> ouvrir</span>
+        <span><kbd>Échap</kbd> fermer</span>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <span>© 2026 Kevin Arnoud — construit à la main, hébergé sur GitHub Pages</span>
+    <span>&gt; propulsé par une source de vérité unique : projects.js</span>
+  </footer>
+
+  <script src="data/projects.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
