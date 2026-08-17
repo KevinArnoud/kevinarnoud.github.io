@@ -214,7 +214,7 @@ const PROJECTS = [
 /* Entrées de navigation additionnelles pour la command palette */
 const NAV_ITEMS = [
   { type: "page", label: "Accueil", hint: "revenir au hub", href: "index.html" },
-  { type: "page", label: "Dossier de compétences", hint: "CV interactif — bientôt lié", href: "#dc" }
+  { type: "page", label: "Dossier de compétences", hint: "parcours complet · CV imprimable", href: "dc.html" }
 ];
 
 /* ============================================================

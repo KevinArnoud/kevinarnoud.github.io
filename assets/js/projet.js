@@ -54,9 +54,19 @@
       ).join("") +
     "</div>" +
 
-    rendreSections(projet);
+    rendreSections(projet) +
+    lienDossierCompetences();
 
   activerDemoEmbed(projet);
+
+  /* -- Renvoi vers le dossier de compétences (présent sur toutes
+        les fiches, y compris celles encore en placeholder) -- */
+  function lienDossierCompetences() {
+    return '<aside class="fiche-suite">' +
+      "<span>Ce projet s'inscrit dans un parcours de 10 ans en IT.</span>" +
+      '<a class="btn btn-ghost" href="dc.html">Voir le parcours complet →</a>' +
+    "</aside>";
+  }
 
   /* -- Sections de contenu (fiche complète) ou placeholder (Phase 2 à venir) -- */
   function rendreSections(p) {

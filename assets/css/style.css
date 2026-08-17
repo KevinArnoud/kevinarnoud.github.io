@@ -462,3 +462,264 @@ footer {
 .demo-note {
   margin-top: 10px; font-family: var(--font-mono); font-size: .76rem; color: var(--muted);
 }
+
+/* -- Renvoi vers le DC en pied de fiche projet -- */
+.fiche-suite {
+  display: flex; align-items: center; justify-content: space-between;
+  gap: 18px; flex-wrap: wrap;
+  max-width: 760px; margin: 0 0 80px; padding: 22px 24px;
+  border: 1px solid var(--line); border-radius: var(--radius);
+  background: var(--bg-1);
+  color: var(--muted); font-size: .93rem;
+}
+
+/* ============================================================
+   13. DOSSIER DE COMPÉTENCES (dc.html)
+   ------------------------------------------------------------
+   Aucun token nouveau : la page réutilise intégralement les
+   variables, la typo et les composants (.chip, .btn, .section-head)
+   du design system ci-dessus.
+   ============================================================ */
+.dc-chargement { padding: 90px 0; color: var(--muted); font-size: .9rem; }
+
+/* -- Hero -- */
+.dc-hero { padding: 54px 0 20px; }
+.dc-hero h1 {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 5.4vw, 3.4rem);
+  font-weight: 700; line-height: 1.08; letter-spacing: -.02em;
+  margin-bottom: 20px;
+}
+.dc-badges { margin-bottom: 22px; }
+.dc-contacts {
+  display: flex; flex-wrap: wrap; gap: 10px 22px;
+  font-family: var(--font-mono); font-size: .82rem;
+  padding-bottom: 24px; border-bottom: 1px solid var(--line);
+}
+.dc-contact { color: var(--muted); }
+.dc-contact:hover { color: var(--accent); }
+.dc-actions { display: flex; gap: 14px; flex-wrap: wrap; margin-top: 24px; }
+
+/* -- Sections -- */
+.dc-section { padding: 52px 0 0; }
+.dc-section .section-head { margin-bottom: 26px; }
+
+/* -- Profil -- */
+.dc-pitch { color: var(--text); font-size: 1.05rem; max-width: 760px; margin-bottom: 24px; }
+.dc-piliers {
+  display: grid; gap: var(--gap);
+  grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+}
+.dc-pilier {
+  background: var(--bg-1); border: 1px solid var(--line);
+  border-radius: var(--radius); padding: 22px 24px;
+}
+.dc-pilier h3 {
+  font-family: var(--font-display); font-size: 1.1rem; margin-bottom: 10px;
+}
+.dc-pilier p { color: var(--muted); font-size: .93rem; }
+.dc-recherche {
+  margin-top: var(--gap); padding: 20px 24px; max-width: 900px;
+  border: 1px solid var(--line); border-left: 3px solid var(--accent-2);
+  border-radius: 0 var(--radius) var(--radius) 0;
+  background: rgba(157, 123, 255, .05);
+  color: var(--muted); font-size: .93rem;
+}
+.dc-recherche strong { color: var(--accent-2); font-weight: 600; }
+
+/* -- Expériences : format PROMPT / RESPONSE (cohérence DA-3) -- */
+.dc-exp {
+  background: var(--bg-1); border: 1px solid var(--line);
+  border-radius: var(--radius); padding: 24px 26px; margin-bottom: var(--gap);
+}
+.dc-exp-head {
+  display: flex; align-items: baseline; justify-content: space-between;
+  gap: 16px; flex-wrap: wrap;
+  padding-bottom: 16px; margin-bottom: 18px; border-bottom: 1px solid var(--line);
+}
+.dc-exp-head h3 { font-family: var(--font-display); font-size: 1.15rem; }
+.dc-exp-societe { color: var(--accent); font-weight: 500; }
+.dc-exp-periode { font-size: .78rem; color: var(--muted); white-space: nowrap; }
+
+.dc-io { margin-bottom: 16px; }
+.dc-io-label {
+  display: inline-block; font-size: .68rem; letter-spacing: .1em;
+  color: var(--accent); border: 1px solid var(--line);
+  background: rgba(72, 202, 228, .06);
+  border-radius: 4px; padding: 2px 8px; margin-bottom: 10px;
+}
+.dc-io-label.dc-io-response { color: var(--ok); background: rgba(87, 230, 168, .06); }
+.dc-io-texte { color: var(--text); opacity: .92; font-size: .95rem; }
+.dc-io-liste { margin: 0; padding-left: 18px; list-style: none; }
+.dc-io-liste li {
+  position: relative; color: var(--muted); font-size: .92rem; margin-bottom: 8px;
+}
+.dc-io-liste li::before {
+  content: "▸"; position: absolute; left: -18px; color: var(--accent); opacity: .7;
+}
+.dc-env { margin-top: 16px; }
+
+.dc-liens {
+  display: flex; flex-wrap: wrap; align-items: center; gap: 8px 16px;
+  margin-top: 18px; padding-top: 16px; border-top: 1px solid var(--line);
+}
+.dc-liens-label { font-size: .7rem; color: var(--muted); letter-spacing: .06em; }
+.dc-lien-projet { font-family: var(--font-mono); font-size: .8rem; color: var(--accent); }
+.dc-lien-projet:hover { text-decoration: underline; }
+
+/* -- Compétences techniques -- */
+.dc-grille-skills {
+  display: grid; gap: var(--gap);
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+.dc-skill {
+  background: var(--bg-1); border: 1px solid var(--line);
+  border-radius: var(--radius); padding: 20px 22px;
+}
+.dc-skill h3 {
+  font-family: var(--font-mono); font-size: .84rem; color: var(--muted);
+  letter-spacing: .04em; margin-bottom: 14px;
+}
+
+/* -- Soft skills -- */
+.dc-grille-soft {
+  display: grid; gap: var(--gap);
+  grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+}
+.dc-soft {
+  border: 1px solid var(--line); border-left: 3px solid var(--accent);
+  border-radius: 0 var(--radius) var(--radius) 0;
+  padding: 18px 22px; background: var(--bg-1);
+}
+.dc-soft h3 { font-family: var(--font-display); font-size: 1rem; margin-bottom: 8px; }
+.dc-soft p { color: var(--muted); font-size: .9rem; }
+
+/* -- Formations + Langues (double colonne) -- */
+.dc-double {
+  display: grid; gap: var(--gap);
+  grid-template-columns: 1.6fr 1fr;
+}
+@media (max-width: 780px) { .dc-double { grid-template-columns: 1fr; } }
+.dc-colonne h3 {
+  font-family: var(--font-mono); font-size: .84rem; color: var(--muted);
+  letter-spacing: .04em; margin-bottom: 16px;
+}
+.dc-formation {
+  padding: 16px 0; border-bottom: 1px solid var(--line);
+}
+.dc-formation:last-child { border-bottom: 0; }
+.dc-formation-periode { font-size: .74rem; color: var(--accent); }
+.dc-formation-intitule { font-size: .95rem; margin-top: 4px; }
+.dc-formation-organisme { font-size: .84rem; color: var(--muted); margin-top: 2px; }
+.dc-langue {
+  display: flex; justify-content: space-between; align-items: baseline; gap: 12px;
+  padding: 16px 0; border-bottom: 1px solid var(--line);
+}
+.dc-langue:last-child { border-bottom: 0; }
+.dc-langue-nom { font-size: .95rem; }
+.dc-langue-niveau { font-size: .78rem; color: var(--muted); }
+
+/* Marge de fin avant le footer */
+#dc-formations { padding-bottom: 80px; }
+
+/* ============================================================
+   14. IMPRESSION / PDF (@media print)
+   ------------------------------------------------------------
+   Thème light forcé, chrome d'interface masqué, pagination A4.
+   Les tokens sont redéfinis localement : le reste du site reste
+   dark, seule la sortie papier bascule.
+   ============================================================ */
+@media print {
+  @page { size: A4; margin: 14mm 13mm; }
+
+  :root {
+    --bg-0: #ffffff;
+    --bg-1: #ffffff;
+    --bg-2: #ffffff;
+    --line: #c8ced6;
+    --text: #16202b;
+    --muted: #4a5866;
+    --accent: #10627a;
+    --accent-2: #4b338f;
+    --ok: #1c6b4a;
+    --warn: #7a5410;
+    --shadow-glow: none;
+    --gradient: none;
+  }
+
+  html, body {
+    background: #fff !important; color: var(--text) !important;
+    font-size: 10.5pt; line-height: 1.45;
+  }
+
+  /* -- Chrome d'interface : hors sortie papier.
+     .hero-eyebrow porte la signature terminal du site, hors sujet
+     sur un CV imprimé. -- */
+  .no-print, .topbar, #palette-overlay, #bg-net, #boot,
+  .dc-actions, .breadcrumb, .fiche-suite,
+  #dc .hero-eyebrow, footer .no-print { display: none !important; }
+
+  /* -- Animations et révélations neutralisées -- */
+  *, *::before, *::after {
+    animation: none !important; transition: none !important;
+    box-shadow: none !important; text-shadow: none !important;
+  }
+  .reveal { opacity: 1 !important; transform: none !important; }
+
+  .wrap { max-width: none; padding: 0; }
+
+  /* -- Le dégradé de texte ne s'imprime pas : couleur pleine -- */
+  .hero h1 .grad, .kpi .val {
+    background: none !important; color: var(--accent) !important;
+    -webkit-text-fill-color: var(--accent) !important;
+  }
+
+  /* -- Surfaces : à plat, encadrées -- */
+  .dc-exp, .dc-pilier, .dc-skill, .dc-soft, .dc-recherche {
+    background: #fff !important; border: 1px solid var(--line) !important;
+  }
+  .chip {
+    background: #fff !important; border: 1px solid var(--line) !important;
+    color: var(--text) !important; font-size: 7.5pt; padding: 1px 6px;
+  }
+  .dc-io-label {
+    background: #fff !important; border: 1px solid var(--line) !important;
+    color: var(--text) !important;
+  }
+
+  /* -- Pagination A4 : aucun bloc coupé -- */
+  .dc-exp, .dc-skill, .dc-soft, .dc-pilier,
+  .dc-formation, .dc-langue, .dc-recherche {
+    break-inside: avoid; page-break-inside: avoid;
+  }
+  .dc-section { break-inside: auto; padding: 18px 0 0; }
+  .dc-section .section-head h2 { break-after: avoid; page-break-after: avoid; }
+  .dc-exp-head { break-after: avoid; page-break-after: avoid; }
+  h1, h2, h3 { break-after: avoid; page-break-after: avoid; }
+
+  /* -- Liens : texte + URL complète entre parenthèses -- */
+  a[data-print-url]::after {
+    content: " (" attr(data-print-url) ")";
+    font-family: var(--font-mono); font-size: 7.5pt; color: var(--muted);
+    word-break: break-all;
+  }
+  a { color: var(--text) !important; text-decoration: none; }
+  .dc-lien-projet { color: var(--accent) !important; }
+
+  /* -- Compacité papier -- */
+  .dc-hero { padding: 0 0 12px; }
+  .dc-hero h1 { font-size: 22pt; margin-bottom: 10px; }
+  .dc-contacts { padding-bottom: 12px; }
+  .dc-exp { padding: 12px 14px; margin-bottom: 12px; }
+  .dc-piliers, .dc-grille-skills, .dc-grille-soft {
+    grid-template-columns: 1fr 1fr; gap: 10px;
+  }
+  .dc-double { grid-template-columns: 1.6fr 1fr; gap: 16px; }
+  #dc-formations { padding-bottom: 0; }
+
+  /* -- Pied de page : fraîcheur de la donnée conservée -- */
+  footer {
+    border-top: 1px solid var(--line); padding: 10px 0 0;
+    font-size: 7.5pt; color: var(--muted);
+  }
+}

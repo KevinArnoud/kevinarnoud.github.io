@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dossier de compétences — Kevin Arnoud</title>
+  <meta name="description" content="Dossier de compétences de Kevin Arnoud : 10 ans d'IT, pilotage de projets, ingénierie système, automatisation et data.">
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+  <meta property="og:type" content="profile">
+  <meta property="og:title" content="Dossier de compétences — Kevin Arnoud">
+  <meta property="og:description" content="Parcours complet : pilotage & management, expertise technique, automatisation et pilotage par la donnée.">
+  <meta property="og:url" content="https://kevinarnoud.github.io/dc.html">
+  <meta property="og:image" content="https://kevinarnoud.github.io/assets/og-image.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Inter:wght@400;500&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+  <!-- Pas de pré-roll boot sur cette page (contrainte 2) : le DC est une
+       page de consultation, pas une entrée de site. -->
+
+  <canvas id="bg-net" aria-hidden="true"></canvas>
+
+  <nav class="topbar no-print">
+    <a class="brand" href="index.html"><span class="prompt-sign">&gt;</span> kevin.arnoud<span class="prompt-sign">_</span></a>
+    <button class="kbd-hint" type="button" aria-label="Ouvrir la navigation (Ctrl+K)">
+      <span class="kbd-label">naviguer</span> <kbd>Ctrl</kbd><kbd>K</kbd>
+    </button>
+  </nav>
+
+  <main class="wrap" id="dc">
+    <!-- Contenu injecté par assets/js/dc.js depuis cv.json (source de
+         vérité unique). État d'erreur géré si le fetch échoue. -->
+    <p class="dc-chargement mono">&gt; chargement du dossier de compétences…</p>
+  </main>
+
+  <div id="palette-overlay" role="dialog" aria-modal="true" aria-label="Navigation rapide">
+    <div id="palette">
+      <div id="palette-input-row">
+        <span class="prompt-sign">&gt;</span>
+        <input id="palette-input" type="text" placeholder="chercher un projet, une page…" autocomplete="off" spellcheck="false">
+      </div>
+      <div id="palette-list" role="listbox"></div>
+      <div id="palette-foot">
+        <span><kbd>↑</kbd><kbd>↓</kbd> naviguer</span>
+        <span><kbd>Entrée</kbd> ouvrir</span>
+        <span><kbd>Échap</kbd> fermer</span>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <span>© 2026 Kevin Arnoud — construit à la main, hébergé sur GitHub Pages</span>
+    <span id="dc-meta" class="mono"><!-- meta.version + meta.dateMaj injectés --></span>
+  </footer>
+
+  <script src="data/projects.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/dc.js"></script>
+</body>
+</html>

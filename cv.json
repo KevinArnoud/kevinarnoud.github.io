@@ -1,0 +1,304 @@
+{
+  "meta": {
+    "version": "2.1.0",
+    "dateMaj": "2026-08-17",
+    "anonyme": false
+  },
+  "identity": {
+    "nom": "Kevin Arnoud",
+    "badges": [
+      "MLOps (en cours)",
+      "Manager IT",
+      "Chef de Projet",
+      "Référent Technique",
+      "Ingénieur Systèmes",
+      "Automatisation & Data"
+    ],
+    "contacts": {
+      "email": "kev.arnoud@outlook.fr",
+      "telephone": "07 65 76 79 86",
+      "linkedin": "https://www.linkedin.com/in/kevin-arnoud-571771184",
+      "portfolio": "https://kevinarnoud.github.io"
+    }
+  },
+  "profile": {
+    "pitch": "Professionnel IT (10 ans) avec un double profil opérationnel :",
+    "piliers": [
+      {
+        "titre": "Pilotage & Management",
+        "description": "Gestion de portefeuilles (+30 projets simultanés), encadrement d'équipes (jusqu'à 20 personnes), coordination multi-équipes et reporting KPI. Expérience avérée en tant que Chef de Projet IT, Responsable de Pôle et coordinateur technique."
+      },
+      {
+        "titre": "Expertise Technique",
+        "description": "Automatisation à grande échelle (déploiement PowerShell sur +3000 serveurs, industrialisation MDT), optimisation via IA (Prompt Engineering pour accélérer le développement), et solutions data-driven (Power BI, dashboards opérationnels)."
+      }
+    ],
+    "recherche": "Un poste de Manager IT, Team Leader ou Référent Technique dans un environnement où l'efficacité opérationnelle, la transparence et l'entraide priment sur les jeux politiques. Je suis pleinement efficace dans les structures où la communication est factuelle, les décisions techniques fluides, et où l'impact réel est reconnu et la collaboration directe favorisée."
+  },
+  "skills": [
+    {
+      "categorie": "Automatisation & Script",
+      "items": [
+        "PowerShell",
+        "Prompt Engineering (IA)",
+        "VBA Excel",
+        "Batch",
+        "Ansible"
+      ]
+    },
+    {
+      "categorie": "Power Platform & M365",
+      "items": [
+        "Power Apps",
+        "Power Automate",
+        "Microsoft Lists",
+        "Power BI (dashboards KPI)",
+        "SharePoint"
+      ]
+    },
+    {
+      "categorie": "Gestion de projet & BI",
+      "items": [
+        "Méthodologies Waterfall",
+        "Coordination multi-équipes",
+        "Outils ticketing & suivi",
+        "Reporting opérationnel"
+      ]
+    },
+    {
+      "categorie": "Virtualisation",
+      "items": [
+        "VMware vSphere",
+        "Hyper-V",
+        "VirtualBox",
+        "VMware Player"
+      ]
+    },
+    {
+      "categorie": "Systèmes",
+      "items": [
+        "Windows Server (2003 à 2022)",
+        "Active Directory, DNS, DHCP",
+        "DFS, GPO, IIS, WSUS",
+        "Linux",
+        "MS SQL"
+      ]
+    },
+    {
+      "categorie": "Outils & Plateformes",
+      "items": [
+        "Veeam Backup",
+        "Office 365",
+        "Sophos (Firewall/VPN)",
+        "MDT (Deployment)",
+        "Jira",
+        "ChatGPT, Claude AI, Gemini",
+        "CheckMK, Nagios, Splunk",
+        "Qlik Sense"
+      ]
+    }
+  ],
+  "softSkills": [
+    {
+      "titre": "Leadership technique & pragmatique",
+      "description": "Encadrement d'équipes pluridisciplinaires avec une approche directe et orientée résultats. Management basé sur la confiance, l'autonomie et l'entraide."
+    },
+    {
+      "titre": "Optimisation & Automatisation",
+      "description": "Recherche constante d'efficacité opérationnelle via l'automatisation (PowerShell, IA) et l'industrialisation des processus. Approche data-driven pour le pilotage."
+    },
+    {
+      "titre": "Analyse & Résolution",
+      "description": "Capacité à diagnostiquer rapidement les problématiques complexes et à proposer des solutions techniques concrètes. Approche factuelle et méthodique."
+    },
+    {
+      "titre": "Transparence & Proactivité",
+      "description": "Communication directe et honnête. Identification proactive des axes d'amélioration et proposition d'initiatives concrètes pour optimiser les performances."
+    },
+    {
+      "titre": "Collaboration & Entraide",
+      "description": "Travail d'équipe basé sur la transparence, le partage de connaissances et l'entraide. Gestion constructive des désaccords et fédération autour d'objectifs communs."
+    }
+  ],
+  "experiences": [
+    {
+      "societe": "TECH VALLEY",
+      "societeAnonyme": "ESN régionale (mission grand compte industriel)",
+      "role": "Chef de Projet et Consultant",
+      "periode": "Depuis juin 2026",
+      "prompt": "Moderniser les processus outillés d'un périmètre d'ingénierie système chez un grand compte industriel.",
+      "response": [
+        "Refonte complète du processus de gestion des changements : référentiel Microsoft Lists, configuration JSON, automatisation PowerShell du formatage Excel/Word — ~35 h/semaine économisées, 0 € d'investissement",
+        "Digitalisation du circuit de validation Go To Run : Power Apps (demande/validation), Microsoft Lists (référentiel), Teams (notifications/approbations) — 4 versions itératives augmentant l'autonomie des chefs de projet",
+        "Développement accéléré par l'IA (Claude) : reproduction ISO d'une application legacy puis livraison des évolutions attendues, en jours plutôt qu'en mois"
+      ],
+      "environnement": [
+        "Power Apps",
+        "Microsoft Lists",
+        "Teams",
+        "PowerShell",
+        "JSON",
+        "Suite M365",
+        "IA (Claude)"
+      ],
+      "linkedProjects": [
+        "refonte-changes",
+        "go-to-run"
+      ]
+    },
+    {
+      "societe": "SOPRA STERIA",
+      "societeAnonyme": "ESN internationale",
+      "role": "Chef de Projet IT",
+      "periode": "2024 - 2025",
+      "prompt": "Remplacer 3 chefs de projet et gérer le portefeuille \"Build On Demand\".",
+      "response": [
+        "Pilotage d'un portefeuille de +30 projets IT en parallèle (méthodologie Waterfall)",
+        "Analyse et gestion des risques projets avec mise en place de plans préventifs et correctifs",
+        "Chiffrage et planification : estimation des charges, allocation des ressources et suivi budgétaire",
+        "Animation des instances de pilotage (comités projet, comités de direction) et reporting multi-niveaux",
+        "Coordination des équipes opérationnelles multi-domaines pour garantir les livrables dans les délais",
+        "Reprise et assainissement de la cellule projets au forfait : automatisation VBA de la facturation et du reporting hebdomadaire — 1 chef de projet au lieu de 4 sur ~30 projets ouverts, déblocage de projets à l'arrêt depuis des semaines"
+      ],
+      "environnement": [
+        "Suite Microsoft",
+        "Jarvis",
+        "Qlik Sense",
+        "Power BI"
+      ],
+      "linkedProjects": [
+        "reprise-cellule-forfait"
+      ]
+    },
+    {
+      "societe": "SOPRA STERIA",
+      "societeAnonyme": "ESN internationale",
+      "role": "Ingénieur Systèmes",
+      "periode": "2022 - 2024",
+      "prompt": "Intégrer une squad Agile pour le déploiement et l'évolution des infrastructures.",
+      "response": [
+        "Industrialisation des déploiements : création du Master Windows Server 2019 durci (MDT & PowerShell) — 1 jour de charge gagné par VM, soit ~10 jours-homme/semaine (-50 % de charge de déploiement)",
+        "Automatisation à grande échelle : déploiement d'agents logiciels sur +3000 serveurs via PowerShell",
+        "Optimisation du développement : utilisation de l'IA avancée pour accélérer la génération de scripts complexes et l'automatisation des processus",
+        "Maintien en condition opérationnelle des infrastructures (Windows/Linux, VMware vSphere)",
+        "Garantie de la continuité d'activité via gestion proactive des sauvegardes Veeam et durcissement OS",
+        "Pilotage de la transition des projets de Build vers le Run avec transfert de compétences aux équipes opérationnelles"
+      ],
+      "environnement": [
+        "Windows Server",
+        "Linux",
+        "VMware vSphere",
+        "PowerShell",
+        "Ansible",
+        "Veeam",
+        "Trend Micro",
+        "MS SQL",
+        "Outils IA (ChatGPT, Claude, Gemini)"
+      ],
+      "linkedProjects": [
+        "w19-master-deploy"
+      ]
+    },
+    {
+      "societe": "PARTITIO",
+      "societeAnonyme": "ESN régionale",
+      "role": "Coordinateur de Projets Cloud",
+      "periode": "2022",
+      "prompt": "Piloter des projets de migration et déploiement cloud pour divers clients.",
+      "response": [
+        "Pilotage de projets de migration et de déploiement Cloud (IaaS, RDS) pour clients multi-secteurs",
+        "Conduite des phases projet : animation des ateliers de lancement, recueil des besoins et cadrage technique",
+        "Coordination des intervenants techniques (internes et prestataires externes) et suivi du planning",
+        "Interface client : gestion de la relation, suivi de satisfaction et accompagnement au changement"
+      ],
+      "environnement": [
+        "Cloud IaaS",
+        "RDS",
+        "Outils de gestion de projet"
+      ],
+      "linkedProjects": []
+    },
+    {
+      "societe": "PARTITIO",
+      "societeAnonyme": "ESN régionale",
+      "role": "Responsable Pôle RUN",
+      "periode": "2020 - 2021",
+      "prompt": "Manager l'équipe support (RUN) et gérer les incidents critiques des grands comptes.",
+      "response": [
+        "Management opérationnel : encadrement et animation d'une équipe de 6 techniciens support",
+        "Montée en compétences de l'équipe via coaching technique et création de fiches réflexes pour la résolution N1-N3",
+        "Référent technique N3 : pilotage des incidents complexes et coordination des cellules de crise",
+        "Pilotage de la performance via Business Intelligence : création de dashboards Power BI pour le suivi SLA de +30 clients",
+        "Amélioration continue : analyse des besoins clients et proposition d'évolutions de services basées sur les données opérationnelles"
+      ],
+      "environnement": [
+        "Windows Server",
+        "VMware",
+        "Power BI",
+        "Outils de ticketing",
+        "Supervision"
+      ],
+      "linkedProjects": []
+    },
+    {
+      "societe": "PARTITIO",
+      "societeAnonyme": "ESN régionale",
+      "role": "Consultant Support Informatique",
+      "periode": "2017 - 2020",
+      "prompt": "Assurer le support technique mutualisé (N1-N3) pour une clientèle B2B.",
+      "response": [
+        "Gestion du support B2B multi-clients (N1-N3) et supervision proactive des infrastructures",
+        "Administration des services d'infrastructure clients (Active Directory, DNS, DHCP, GPO, DFS)",
+        "Exploitation des environnements virtualisés (VMware vSphere, Hyper-V)",
+        "Gestion des sauvegardes (Veeam Backup) et de la messagerie (Office 365)",
+        "Support sécurité et réseau : administration Firewall Sophos, VPN, résolution d'incidents de base"
+      ],
+      "environnement": [
+        "Windows Server",
+        "VMware vSphere",
+        "Hyper-V",
+        "Veeam",
+        "Office 365",
+        "Sophos",
+        "Active Directory"
+      ],
+      "linkedProjects": []
+    }
+  ],
+  "education": [
+    {
+      "periode": "2025 - 2026 (en cours)",
+      "organisme": "Microsoft, Google, Kaggle",
+      "intitule": "Spécialisation MLOps — Industrialisation IA",
+      "note": "Auto-formation technique/fonctionnelle"
+    },
+    {
+      "periode": "2025",
+      "organisme": "LearningShelter (LiveMentor)",
+      "intitule": "Certification « Développer son activité avec le No-Code et l'Automatisation »",
+      "note": "Marketing Digital & Efficacité Opérationnelle"
+    },
+    {
+      "periode": "2018 - 2019",
+      "organisme": "CESI Labège",
+      "intitule": "Formation « Management et gestion de projet IT »",
+      "note": ""
+    },
+    {
+      "periode": "2016",
+      "organisme": "AP Formation",
+      "intitule": "Titre Professionnel « Gestionnaire Systèmes et Réseaux »",
+      "note": "Certification Niveau 5"
+    }
+  ],
+  "languages": [
+    {
+      "langue": "Français",
+      "niveau": "Langue maternelle"
+    },
+    {
+      "langue": "Anglais",
+      "niveau": "Technique écrit"
+    }
+  ]
+}
