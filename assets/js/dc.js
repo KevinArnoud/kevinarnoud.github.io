@@ -107,7 +107,12 @@
       "</div>" +
       (p.recherche
         ? '<aside class="dc-recherche">' +
-            "<strong>Recherche</strong> — " + esc(p.recherche) +
+            /* Le texte est encapsulé : l'encart tient la pleine largeur
+               de la grille, mais sa ligne reste bornée à une mesure
+               lisible (cf. .dc-recherche-texte). */
+            '<p class="dc-recherche-texte">' +
+              "<strong>Recherche</strong> — " + esc(p.recherche) +
+            "</p>" +
           "</aside>"
         : "")
     );

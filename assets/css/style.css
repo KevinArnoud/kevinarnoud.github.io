@@ -518,13 +518,20 @@ footer {
   font-family: var(--font-display); font-size: 1.1rem; margin-bottom: 10px;
 }
 .dc-pilier p { color: var(--muted); font-size: .93rem; }
+/* Aligné sur .dc-pilier — mêmes padding, rayon et interligne (1.65
+   hérité du body) : l'encart doit lire comme une troisième surface de
+   la même famille, pas comme un bandeau. Seul le liseré violet le
+   distingue. */
 .dc-recherche {
-  margin-top: var(--gap); padding: 20px 24px; max-width: 900px;
+  margin-top: var(--gap); padding: 22px 24px;
   border: 1px solid var(--line); border-left: 3px solid var(--accent-2);
-  border-radius: 0 var(--radius) var(--radius) 0;
+  border-radius: var(--radius);
   background: rgba(157, 123, 255, .05);
   color: var(--muted); font-size: .93rem;
 }
+/* Pleine largeur pour tenir la grille, mesure bornée pour la lecture :
+   au-delà d'environ 75 caractères, l'œil rate la ligne au retour. */
+.dc-recherche-texte { max-width: 75ch; }
 .dc-recherche strong { color: var(--accent-2); font-weight: 600; }
 
 /* -- Expériences : format PROMPT / RESPONSE (cohérence DA-3) -- */
@@ -678,6 +685,10 @@ footer {
   .dc-exp, .dc-pilier, .dc-skill, .dc-soft, .dc-recherche {
     background: #fff !important; border: 1px solid var(--line) !important;
   }
+  /* Le liseré violet est l'identité du bloc Recherche : le à-plat
+     ci-dessus le ramènerait au gris des autres surfaces. --accent-2
+     vaut ici sa déclinaison encre (#4b338f), lisible en niveaux de gris. */
+  .dc-recherche { border-left: 3px solid var(--accent-2) !important; }
   .chip {
     background: #fff !important; border: 1px solid var(--line) !important;
     color: var(--text) !important; font-size: 7.5pt; padding: 1px 6px;
@@ -714,6 +725,9 @@ footer {
   .dc-piliers, .dc-grille-skills, .dc-grille-soft {
     grid-template-columns: 1fr 1fr; gap: 10px;
   }
+  /* Suit le gap resserré des piliers ci-dessus : sur papier, --gap
+     (24px) rouvrirait un trou sous les deux cartes. */
+  .dc-recherche { margin-top: 10px; }
   .dc-double { grid-template-columns: 1.6fr 1fr; gap: 16px; }
   #dc-formations { padding-bottom: 0; }
 
