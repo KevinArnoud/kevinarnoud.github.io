@@ -529,9 +529,21 @@ footer {
   background: rgba(157, 123, 255, .05);
   color: var(--muted); font-size: .93rem;
 }
-/* Pleine largeur pour tenir la grille, mesure bornée pour la lecture :
-   au-delà d'environ 75 caractères, l'œil rate la ligne au retour. */
-.dc-recherche-texte { max-width: 75ch; }
+/* Le cadre occupe toute la grille, mais une ligne pleine largeur ferait
+   ~106 caractères — l'œil rate le retour. Deux colonnes ramènent la
+   mesure à ~50 caractères, celle des piliers, et reprennent leur rythme.
+
+   La gouttière vaut le vide qui sépare le texte des deux cartes :
+   padding droit (24) + gap de la grille (24) + padding gauche (24) +
+   les deux bordures (2). À cette valeur les colonnes s'alignent au
+   pixel sur le texte des cartes, quelle que soit la largeur de grille.
+
+   240px : seuil calculé pour que le repli en une colonne tombe très
+   exactement là où .dc-piliers empile ses cartes (2 × 290 + 24). */
+.dc-recherche-texte {
+  columns: 2 240px;
+  column-gap: calc(var(--gap) * 3 + 2px);
+}
 .dc-recherche strong { color: var(--accent-2); font-weight: 600; }
 
 /* -- Expériences : format PROMPT / RESPONSE (cohérence DA-3) -- */
@@ -728,6 +740,9 @@ footer {
   /* Suit le gap resserré des piliers ci-dessus : sur papier, --gap
      (24px) rouvrirait un trou sous les deux cartes. */
   .dc-recherche { margin-top: 10px; }
+  /* Même recalcul pour la gouttière des colonnes : 24 + 10 + 24 + 2,
+     le gap de grille valant 10px en print et non --gap. */
+  .dc-recherche-texte { column-gap: 60px; }
   .dc-double { grid-template-columns: 1.6fr 1fr; gap: 16px; }
   #dc-formations { padding-bottom: 0; }
 
