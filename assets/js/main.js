@@ -19,7 +19,7 @@ const reduitMotion = window.matchMedia("(prefers-reduced-motion: reduce)").match
 /* ============================================================
    1. BOOT SEQUENCE
    ------------------------------------------------------------
-   ~2,5 s au total. Poka-Yoke :
+   ~4,5 s au total. Poka-Yoke :
    - clic / touche = skip immédiat
    - déjà vue dans la session = pas rejouée (sessionStorage)
    - reduced-motion = pas jouée du tout
@@ -76,8 +76,8 @@ const reduitMotion = window.matchMedia("(prefers-reduced-motion: reduce)").match
     revelerHero(false);
   }
 
-  /* Fin nominale à 2,55 s — skip possible avant */
-  setTimeout(finirBoot, 2550);
+  /* Fin nominale à 4,5 s — pause de lecture ~2 s ; skip possible avant */
+  setTimeout(finirBoot, 4500);
   boot.addEventListener("click", finirBoot);
   window.addEventListener("keydown", finirBoot, { once: true });
 })();
